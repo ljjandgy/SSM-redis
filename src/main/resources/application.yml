@@ -1,0 +1,29 @@
+mybatis:
+  #mapper文件位置
+  mapperLocations: classpath:mapper/*.xml
+  #实体类所在的位置，这样在mybatis文件中使用实体类时就不用写完整路径了，只用写类名即可
+  typeAliasesPackage: com.example.springredis.domain
+spring:
+  datasource:
+    password: 123456Aa?
+    username: open
+    url: jdbc:mysql://10.10.9.9:3306/hmapps?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+pagehelper:
+  supportMethodsArguments: true
+mapper:
+  #通用mapper配置文件
+  notEmpty: true
+  before: true
+  style: camelhumpAndLowercase
+  enableMethodAnnotation: true
+  usePrimitiveType: true
+  #安全删除，该属性为true时，delete需要添加上查询条件才能执行，否则报错（使用通用mapper时）
+  safeDelete: true
+  #安全更新，该属性为true时，update需要添加上查询条件才能执行，否则报错（使用通用mapper时）
+  safeUpdate: true
+  #是否使用java类型
+  useJavaType: true
+logging:
+  level:
+    com.example.springredis.dao: debug
