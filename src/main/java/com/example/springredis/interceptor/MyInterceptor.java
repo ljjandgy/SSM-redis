@@ -16,6 +16,7 @@ public class MyInterceptor implements Interceptor{
      */
     @Override
     public boolean before(Object proxy, Object target, Method method, Object[] args) {
+        System.out.println("我在具体逻辑之前执行哦");
         return false;
     }
     /**
@@ -27,7 +28,7 @@ public class MyInterceptor implements Interceptor{
      */
     @Override
     public void around(Object proxy, Object target, Method method, Object[] args) {
-
+        System.out.println("我执行了就不会让真实对象执行了");
     }
     /**
      * 执行完around()或者是真实对象方法之后执行的逻辑
@@ -38,6 +39,6 @@ public class MyInterceptor implements Interceptor{
      */
     @Override
     public void after(Object proxy, Object target, Method method, Object[] args) {
-
+        System.out.println("执行完方法之后执行我哦");
     }
 }
