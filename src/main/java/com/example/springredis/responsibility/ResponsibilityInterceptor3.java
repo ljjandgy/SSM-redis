@@ -19,7 +19,7 @@ public class ResponsibilityInterceptor3 implements Interceptor {
     @Override
     public boolean before(Object proxy, Object target, Method method, Object[] args) {
         System.out.print("我是三号拦截器的before");
-        return false;
+        return true;
     }
     /**
      * 用于代理真实对象的方法（before返回false时触发）

@@ -22,7 +22,7 @@ public class InterceptorJdkProxy implements InvocationHandler {
      * @param interceptorClass 拦截器全限定名
      * @return
      */
-    public Object bind(Object target,String interceptorClass){
+    public static Object bind(Object target,String interceptorClass){
         //newProxyInstance三个参数分别为：真实对象的类加载器，真实对象集成的所有接口类型，实现代理类逻辑的对象（对象必须实现InvocationHandler接口）
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),new InterceptorJdkProxy(target,interceptorClass));
     }
