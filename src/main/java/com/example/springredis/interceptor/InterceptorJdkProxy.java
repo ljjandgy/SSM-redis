@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * JDK代理类
+ * JDK动态代理类
  */
 public class InterceptorJdkProxy implements InvocationHandler {
     private Object target = null;//真实对象
