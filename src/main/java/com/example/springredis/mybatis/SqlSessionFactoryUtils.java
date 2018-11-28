@@ -1,12 +1,10 @@
 package com.example.springredis.mybatis;
 
-
-
-
-
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.ibatis.type.TypeAliasRegistry;
 
 import java.io.IOException;
 import java.io.InputStream;
