@@ -6,6 +6,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @MapperScan(basePackages = "com.example.springredis.dao")
+
 public class SpringRedisApplication {
 
     public static void main(String[] args) {
