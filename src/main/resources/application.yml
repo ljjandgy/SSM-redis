@@ -4,11 +4,26 @@ mybatis:
   #实体类所在的位置，这样在mybatis文件中使用实体类时就不用写完整路径了，只用写类名即可
   typeAliasesPackage: com.example.springredis.domain
 spring:
+  ####数据源配置
   datasource:
     password: 123456Aa?
     username: open
     url: jdbc:mysql://10.10.9.9:3306/hmapps?useUnicode=true&characterEncoding=utf-8
-    driver-class-name: com.mysql.jdbc.Driver
+  ####redis配置
+  redis:
+    ###redis服务配置
+    host: 192.168.152.128
+    ##redis服务端口
+    port: 6379
+    ##redis连接密码auth
+    password: ljj125896?
+    ##jedis数据源设置
+    jedis:
+      pool:
+        max-active: 15
+        min-idle: 3
+        max-idle: 8
+        max-wait: 10s
 pagehelper:
   supportMethodsArguments: true
 mapper:
@@ -27,3 +42,6 @@ mapper:
 logging:
   level:
     com.example.springredis.dao: debug
+
+
+
