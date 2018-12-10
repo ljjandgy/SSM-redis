@@ -9,6 +9,9 @@ spring:
     username: open
     url: jdbc:mysql://10.10.9.9:3306/hmapps?useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 192.168.85.129
+    password: ljj125896?
 pagehelper:
   supportMethodsArguments: true
 mapper:
