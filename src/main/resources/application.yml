@@ -12,7 +12,7 @@ spring:
   ####redis配置
   redis:
     ###redis服务配置
-    host: 192.168.152.128
+    host: 192.168.85.129
     ##redis服务端口
     port: 6379
     ##redis连接密码auth
@@ -24,6 +24,7 @@ spring:
         min-idle: 3
         max-idle: 8
         max-wait: 10s
+    database: 0
 pagehelper:
   supportMethodsArguments: true
 mapper:
