@@ -14,7 +14,8 @@ public class HyperLogLogTest {
     HyperLogLog logLogTest;
     @Test
     public void test(){
-        logLogTest.addLogInfo();
-        System.out.println(logLogTest.getCount());
+       // logLogTest.addLogInfo();
+        System.out.println(logLogTest.getUnionCount("page1","page2"));
+        System.out.println(logLogTest.getUnionCount("page2","page3"));
     }
 }

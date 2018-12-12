@@ -33,6 +33,7 @@ public class RedisConfig {
         template.setValueSerializer(fastJsonRedisSerializer);
         //对hash对象的value值的序列化方式进行设置
         template.setHashValueSerializer(fastJsonRedisSerializer);
+        template.setDefaultSerializer(new StringRedisSerializer());
 
 
         template.setConnectionFactory(factory);

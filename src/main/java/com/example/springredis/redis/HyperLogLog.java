@@ -19,6 +19,12 @@ public class HyperLogLog {
         for (int i=0;i<10000;i++){
             redisTemplate.opsForHyperLogLog().add("page1","user"+i);
         }
+        for (int i=0;i<10000;i++){
+            redisTemplate.opsForHyperLogLog().add("page2","user"+i);
+        }
+        for (int i=0;i<10000;i++){
+            redisTemplate.opsForHyperLogLog().add("page3","users"+i);
+        }
     }
 
     /**
@@ -27,5 +33,12 @@ public class HyperLogLog {
      */
     public long getCount(){
         return redisTemplate.opsForHyperLogLog().size("page1");
+    }
+
+    /**
+     * 合并多个分组，获取数量
+     */
+    public long getUnionCount(String key1,String key2){
+        return redisTemplate.opsForHyperLogLog().union(key1,key2);
     }
 }
