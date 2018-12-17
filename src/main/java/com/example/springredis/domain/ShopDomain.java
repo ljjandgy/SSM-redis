@@ -14,7 +14,6 @@ public class ShopDomain {
     @Column(name = "shop_id")
     @Id
     private String shopId;//主键
-
     private String vendId;//商家内码
     private String shopName;//商铺名称
     private String shopAddr;//商铺地址
