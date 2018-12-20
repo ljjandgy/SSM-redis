@@ -12,8 +12,8 @@ spring:
   ####redis配置
   redis:
     ###redis服务配置
-    #host: 192.168.85.129
-    host: 192.168.152.128
+    host: 192.168.85.129
+    #host: 192.168.152.128
     ##redis服务端口
     port: 6379
     ##redis连接密码auth

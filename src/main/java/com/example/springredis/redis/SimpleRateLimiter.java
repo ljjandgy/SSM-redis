@@ -25,16 +25,17 @@ public class SimpleRateLimiter {
     public boolean isActionAllowed(String userId, String actionKey, int period, int maxCount) {
         String key = String.format("hist:%s:%s", userId, actionKey);
         long nowTs = System.currentTimeMillis();
-        List<Long> list = redisTemplate.executePipelined(new SessionCallback() {
+        List<Object> list = redisTemplate.executePipelined(new SessionCallback() {
             //必须返回null，在管道中使用sessioncallback的时候
             @Override
             public Object execute(RedisOperations redisOperations) throws DataAccessException {
                 redisOperations.boundZSetOps(key).add(""+nowTs,nowTs);//用管道添加zset的内容
-                redisOperations.boundZSetOps(key).reverseRange(0, nowTs - period * 1000);//获取窗口时间请求内容
+                redisOperations.boundZSetOps(key).removeRangeByScore(0, nowTs - period * 1000);//获取窗口时间请求内容
+                redisTemplate.opsForZSet().zCard(key);//获取窗口时间内请求的数量
                 return null;
             }
         });
-        Long count = redisTemplate.opsForZSet().zCard(key);//获取窗口时间内请求的数量
+        Long count = Long.valueOf(list.get(2).toString());
         return count<=maxCount;
     }
 }

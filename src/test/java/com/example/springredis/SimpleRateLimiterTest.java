@@ -17,5 +17,18 @@ public class SimpleRateLimiterTest {
         //60之内只能操作5次
         boolean flag = simpleRateLimiter.isActionAllowed("xiaoxaiolll","reply",60,5);
         System.out.println(flag);
+        flag = simpleRateLimiter.isActionAllowed("xiaoxaiolll","reply",60,5);
+        System.out.println(flag);
+        flag = simpleRateLimiter.isActionAllowed("xiaoxaiolll","reply",60,5);
+        System.out.println(flag);
+        flag = simpleRateLimiter.isActionAllowed("xiaoxaiolll","reply",60,5);
+        System.out.println(flag);
+        flag = simpleRateLimiter.isActionAllowed("xiaoxaiolll","reply",60,5);
+        System.out.println(flag);
+        flag = simpleRateLimiter.isActionAllowed("xiaoxaiolll","reply",60,5);
+        System.out.println(flag);
+        flag = simpleRateLimiter.isActionAllowed("xiaoxaiolll","reply",60,5);
+        System.out.println(flag);
+
     }
 }
