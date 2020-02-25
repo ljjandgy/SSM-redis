@@ -17,9 +17,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BuilderTest {
     @Test
     public void test(){
-        Director director = new Director();//实例化导演类
-        IBuilder builder = new Builder();
-        Product product = director.getProductA(builder);//构建实例
-        System.out.println(product.getPro1());
+        System.out.println(Short.parseShort("" + 1 + 1));
     }
 }

@@ -12,10 +12,12 @@ public class Builder implements IBuilder{
      * @param pro2
      * @param pro3
      */
+    @Override
     public void setPro(String pro1,String pro2,String pro3){
         product = new Product();
         product.setPro1(pro1);
     }
+    @Override
     public Product getProduct(){
         return product;
     }

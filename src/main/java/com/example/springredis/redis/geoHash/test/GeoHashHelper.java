@@ -17,9 +17,9 @@ public class GeoHashHelper {
 
     /**
      * 计算经纬度对应的hash值
-     * @param min 经度或者维度的最小值
-     * @param max 经度或者维度的最大值
-     * @param value 当前元素的经度或者维度
+     * @param min 经度或者纬度的最小值
+     * @param max 经度或者纬度的最大值
+     * @param value 当前元素的经度或者纬度
      * @param list 用于存储hash值的list
      */
     private void convert(double min, double max, double value, List<Character> list) {
@@ -37,7 +37,7 @@ public class GeoHashHelper {
     }
 
     /**
-     * 对计算出来的hash值（偶数经度，奇数是维度）进行base32编码
+     * 对计算出来的hash值（偶数经度，奇数是纬度）进行base32编码
      * @param str hash值
      * @return
      */
