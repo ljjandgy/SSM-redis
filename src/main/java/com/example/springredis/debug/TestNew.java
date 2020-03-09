@@ -19,6 +19,5 @@ public class TestNew {
         Boolean flag = Boolean.FALSE;
         List<DebugBo> debugBoList = Arrays.asList(new DebugBo("a","a"),new DebugBo("b","b"),new DebugBo("c","c"));
         List<String> strList = debugBoList.stream().map(DebugBo::getName).collect(Collectors.toList());
-
     }
 }
