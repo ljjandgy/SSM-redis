@@ -11,6 +11,7 @@ import org.junit.Test;
  * @date 2020-02-25 11:33:09
  */
 public class DebugTest {
+    private TestNew testNew = new TestNew();
     @Test
     public void commonDebugTest(){
 
@@ -21,11 +22,11 @@ public class DebugTest {
     }
     @Test
     public void conditionDebugTest(){
-
+        testNew.test(1);
     }
     @Test
     public void streamTest(){
-        TestNew.test();
+        testNew.test(3);
     }
 
 }

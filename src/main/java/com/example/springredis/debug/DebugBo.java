@@ -11,6 +11,7 @@ public class DebugBo {
     private String name;
 
     private String description;
+    DebugBo(){}
 
     DebugBo(String name,String description){
         this.name = name;

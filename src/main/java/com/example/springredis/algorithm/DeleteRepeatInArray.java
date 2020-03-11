@@ -1,5 +1,7 @@
 package com.example.springredis.algorithm;
 
+import java.io.Serializable;
+
 /**
  * 删除排序数组中重复元素（采用原地算法）
  */
