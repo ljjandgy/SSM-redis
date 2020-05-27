@@ -6,18 +6,18 @@ mybatis:
 spring:
   ####数据源配置
   datasource:
-    password: 123456Aa?
-    username: open
-    url: jdbc:mysql://10.10.9.9:3306/hmapps?useUnicode=true&characterEncoding=utf-8
+    password: root123
+    username: root
+    url: jdbc:mysql://192.168.66.141:3306/dbaas?useUnicode=true&characterEncoding=utf-8
   ####redis配置
   redis:
     ###redis服务配置
-    host: 192.168.85.129
+    host: 8.129.27.199
     #host: 192.168.152.128
     ##redis服务端口
     port: 6379
     ##redis连接密码auth
-    password: ljj125896?
+    password:
     ##jedis数据源设置
     jedis:
       pool:

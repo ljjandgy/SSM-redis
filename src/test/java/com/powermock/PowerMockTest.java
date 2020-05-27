@@ -3,12 +3,10 @@ package com.powermock;
 import com.example.springredis.powermock.MockClass1;
 import com.example.springredis.powermock.MockClass2;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
@@ -16,13 +14,13 @@ import org.powermock.modules.junit4.PowerMockRunner;
 /**
  * @author ljj
  * @version V2.0
- * @className PowermockTest
+ * @className PowerMockTest
  * @description
  * @date 2020-03-06 10:10:28
  */
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({MockClass1.class, MockClass2.class})
-public class PowermockTest {
+public class PowerMockTest {
     @InjectMocks
     private MockClass1 mockClass1;
     @Mock
