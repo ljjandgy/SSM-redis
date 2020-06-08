@@ -1,4 +1,4 @@
-﻿package com.example.springredis.debug;
+package com.example.springredis.debug;
 
 import java.util.Arrays;
 import java.util.List;
