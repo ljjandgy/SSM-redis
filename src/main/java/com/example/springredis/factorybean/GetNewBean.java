@@ -21,4 +21,9 @@ public class GetNewBean implements FactoryBean {
     public Class<?> getObjectType() {
         return CustomBean.class;
     }
+
+    @Override
+    public boolean isSingleton() {
+        return false;
+    }
 }
