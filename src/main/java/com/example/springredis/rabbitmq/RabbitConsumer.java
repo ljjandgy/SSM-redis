@@ -22,7 +22,7 @@ public class RabbitConsumer {
         factory.setPassword("123456");
         Connection connection = factory.newConnection(addresses);
         final Channel channel = connection.createChannel();
-        //设置客户端最多接受未被ack的消息个数
+        //设置客户端最多接受未被ack的消息个数0
         Consumer consumer = new DefaultConsumer(channel){
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
